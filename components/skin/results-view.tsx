@@ -202,7 +202,7 @@ export function SkinResultsView({ formData, capturedImage, onBack }: SkinResults
           <p style={{ color: "#8a8a8a", fontSize: "0.9rem", marginBottom: "16px" }}>
             Want to speak with a specialist about your results?
           </p>
-          <a href="tel:+917409256789" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#ddb95a", color: "#080b12", borderRadius: "10px", padding: "12px 28px", fontSize: "1rem", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 24px rgba(221,185,90,0.3)", transition: "all 0.2s" }}>
+          <a href="tel:+918940056789" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#ddb95a", color: "#080b12", borderRadius: "10px", padding: "12px 28px", fontSize: "1rem", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 24px rgba(221,185,90,0.3)", transition: "all 0.2s" }}>
             Book a Consultation
           </a>
           <div style={{ marginTop: "20px", color: "#8a8a8a", fontSize: "0.82rem", lineHeight: 1.65 }}>
@@ -211,7 +211,7 @@ export function SkinResultsView({ formData, capturedImage, onBack }: SkinResults
             <p>
               <a href="mailto:customercare@adgrohairtirupati.in" style={{ color: "#ddb95a", textDecoration: "none", fontWeight: 700 }}>customercare@adgrohairtirupati.in</a>
               {" | "}
-              <a href="tel:+917409256789" style={{ color: "#ddb95a", textDecoration: "none", fontWeight: 700 }}>+91 7409256789</a>
+              <a href="tel:+918940056789" style={{ color: "#ddb95a", textDecoration: "none", fontWeight: 700 }}>+91 89400 56789</a>
             </p>
           </div>
         </div>
@@ -260,5 +260,6 @@ export function SkinResultsView({ formData, capturedImage, onBack }: SkinResults
     </div>
   )
 }
+
 
 

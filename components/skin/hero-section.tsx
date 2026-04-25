@@ -95,9 +95,9 @@ export function SkinHeroSection({ onStartScan }: SkinHeroSectionProps) {
             variant="outline"
             className="group flex w-full items-center justify-center gap-3 border-primary/40 bg-background/70 px-6 py-5 text-base font-semibold text-foreground shadow-[0_12px_40px_rgba(0,0,0,0.15)] backdrop-blur-sm transition-all hover:border-primary hover:bg-primary/10 hover:text-primary hover:shadow-[0_0_30px_rgba(221,185,90,0.2)] sm:w-auto sm:px-8 sm:py-7 sm:text-lg"
           >
-            <a href="tel:+917409256789">
+            <a href="tel:+918940056789">
               <Phone className="h-5 w-5 transition-transform group-hover:scale-110" />
-              +91 7409256789
+              +91 89400 56789
             </a>
           </Button>
         </div>
@@ -151,4 +151,5 @@ export function SkinHeroSection({ onStartScan }: SkinHeroSectionProps) {
     </section>
   )
 }
+
 

@@ -88,7 +88,7 @@ export function InfoSection({ onStartScan }: InfoSectionProps) {
             marginBottom: "28px",
           }}>
             <Award style={{ width: 13, height: 13 }} />
-            5+ Years Experience | 2,000+ Happy Patients | 10+ Certified Doctors
+            5+ Years Experience | 20,000+ Happy Patients | 10+ Certified Doctors
           </div>
 
           <Carousel className="is-images" opts={{ align: "start", loop: true }}>
@@ -317,7 +317,7 @@ export function InfoSection({ onStartScan }: InfoSectionProps) {
           <div className="is-grid-4">
             {[
               { icon: <HeartHandshake style={{ width: 32, height: 32, color: RED }} />, stat: "5+", sub: "Years Experience", desc: "Trusted experience in hair restoration care." },
-              { icon: <BadgeCheck style={{ width: 32, height: 32, color: RED }} />, stat: "2,000+", sub: "Patients Treated", desc: "Hundreds of successful hair restoration journeys." },
+              { icon: <BadgeCheck style={{ width: 32, height: 32, color: RED }} />, stat: "20,000+", sub: "Patients Treated", desc: "Hundreds of successful hair restoration journeys." },
               { icon: <ShieldCheck style={{ width: 32, height: 32, color: RED }} />, stat: "10+", sub: "Certified Doctors", desc: "Expert doctors guide treatment decisions." },
               
             ].map((item, i) => (
@@ -397,7 +397,7 @@ export function InfoSection({ onStartScan }: InfoSectionProps) {
 
           <div className="is-cta-btns">
             <a
-              href="tel:+917409256789"
+              href="tel:+918940056789"
               className="is-cta-btn"
               style={{
                 display: "flex", alignItems: "center", gap: "10px",
@@ -413,7 +413,7 @@ export function InfoSection({ onStartScan }: InfoSectionProps) {
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 28px rgba(234,36,36,0.3)" }}
             >
               <Phone style={{ width: 20, height: 20 }} />
-              Call Now: +91 7409256789
+              Call Now: +91 89400 56789
             </a>
           </div>
           <div style={{ marginTop: "22px", color: "#6b6b6b", fontSize: "0.86rem", lineHeight: 1.7 }}>
@@ -434,6 +434,7 @@ export function InfoSection({ onStartScan }: InfoSectionProps) {
     </div>
   )
 }
+
 
 
 

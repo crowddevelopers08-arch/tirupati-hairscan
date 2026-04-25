@@ -217,7 +217,7 @@ export function SkinInfoSection({ onStartScan: _onStartScan }: SkinInfoSectionPr
 
           <div className="info-cta-btns">
             <a
-              href="tel:+917409256789"
+              href="tel:+918940056789"
               className="info-cta-btn"
               style={{ display: "flex", alignItems: "center", gap: "10px", background: "transparent", color: "#ddb95a", border: "1px solid rgba(221,185,90,0.4)", borderRadius: "12px", padding: "14px 32px", fontSize: "1rem", fontWeight: 700, textDecoration: "none", backdropFilter: "blur(8px)", transition: "all 0.2s" }}
               onMouseEnter={(e) => {
@@ -230,7 +230,7 @@ export function SkinInfoSection({ onStartScan: _onStartScan }: SkinInfoSectionPr
               }}
             >
               <Phone style={{ width: 20, height: 20 }} />
-              +91 7409256789
+              +91 89400 56789
             </a>
           </div>
           <div style={{ marginTop: "22px", color: "#8a8a8a", fontSize: "0.86rem", lineHeight: 1.7 }}>
@@ -251,5 +251,6 @@ export function SkinInfoSection({ onStartScan: _onStartScan }: SkinInfoSectionPr
     </div>
   )
 }
+
 
 

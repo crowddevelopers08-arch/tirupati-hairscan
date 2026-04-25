@@ -285,7 +285,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
             <p style={{ fontSize: "0.85rem", color: "#6b6b6b" }}>Get expert advice for your hair condition. Book a free consultation now.</p>
           </div>
           <a
-            href="tel:+917409256789"
+            href="tel:+918940056789"
             style={{
               display: "flex", alignItems: "center", gap: "8px",
               background: "linear-gradient(135deg, #ea2424, #c91f1f)",
@@ -305,7 +305,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
             <p>
               <a href="mailto:customercare@adgrohairtirupati.in" style={{ color: RED, textDecoration: "none", fontWeight: 700 }}>customercare@adgrohairtirupati.in</a>
               {" | "}
-              <a href="tel:+917409256789" style={{ color: RED, textDecoration: "none", fontWeight: 700 }}>+91 7409256789</a>
+              <a href="tel:+918940056789" style={{ color: RED, textDecoration: "none", fontWeight: 700 }}>+91 89400 56789</a>
             </p>
           </div>
         </div>
@@ -423,4 +423,5 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
     </div>
   )
 }
+
 

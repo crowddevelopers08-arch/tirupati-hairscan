@@ -271,7 +271,7 @@ export default function ReportPage() {
                 <p style={{ margin: "0 0 4px", fontWeight: 800 }}>Speak with a Specialist</p>
                 <p style={{ margin: 0, color: isSkin ? "#bdb8ae" : "#6b6b6b", fontSize: "0.88rem", lineHeight: 1.6 }}>Get expert advice for your condition. Book a free consultation now.</p>
               </div>
-              <a href="tel:+917409256789" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: accent, color: isSkin ? "#080b12" : "#fff", borderRadius: 999, padding: "12px 24px", fontSize: "0.95rem", fontWeight: 800, textDecoration: "none" }}>
+              <a href="tel:+918940056789" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: accent, color: isSkin ? "#080b12" : "#fff", borderRadius: 999, padding: "12px 24px", fontSize: "0.95rem", fontWeight: 800, textDecoration: "none" }}>
                 <Phone style={{ width: 17, height: 17 }} />
                 Book Consultation
               </a>
@@ -283,4 +283,5 @@ export default function ReportPage() {
     </>
   )
 }
+
 

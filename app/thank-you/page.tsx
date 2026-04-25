@@ -65,7 +65,7 @@ export default function ThankYouPage() {
           </div>
 
           <a
-            href="tel:+917409256789"
+            href="tel:+918940056789"
             style={{
               display: "inline-flex", alignItems: "center", gap: "8px",
               background: "linear-gradient(135deg, #ea2424, #c91f1f)",
@@ -75,7 +75,7 @@ export default function ThankYouPage() {
               boxShadow: "0 8px 28px rgba(234,36,36,0.3)",
             }}
           >
-            Call Us: +91 7409256789
+            Call Us: +91 89400 56789
           </a>
 
           <div style={{ marginTop: "22px", color: "#6b6b6b", fontSize: "0.82rem", lineHeight: 1.65 }}>
@@ -94,4 +94,5 @@ export default function ThankYouPage() {
     </>
   )
 }
+
 

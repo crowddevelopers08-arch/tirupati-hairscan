@@ -30,9 +30,6 @@ export function HeroSection({ onStartScan }: HeroSectionProps) {
 
   const stats = [
     { icon: HeartHandshake, value: "5+", label: "Years Experience" },
-    { icon: BadgeCheck, value: "2,000+", label: "Happy Patients" },
-    { icon: ShieldCheck, value: "10+", label: "Certified Doctors" },
-    { icon: Headphones, value: "20,000+", label: "Happy Patients" },
     { icon: CreditCard, value: "AI", label: "Powered Analysis" },
     { icon: Building2, value: "FDA", label: "Approved Solutions" },
   ]
@@ -54,7 +51,7 @@ export function HeroSection({ onStartScan }: HeroSectionProps) {
           <img src="/adgrologo.png" alt="Adgro Hair Tirupati" style={{ height: 42, width: "auto", objectFit: "contain" }} />
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <span style={{ fontSize: "0.8rem", color: "#6b6b6b", fontWeight: 500, display: "none" }} className="sm:block">Free AI Hair Analysis</span>
-            <a href="tel:+917409256789" style={{
+            <a href="tel:+918940056789" style={{
               display: "flex", alignItems: "center", gap: "7px",
               background: "linear-gradient(135deg,#ea2424,#c91f1f)", color: "#fff",
               borderRadius: "100px", padding: "9px 20px",
@@ -63,7 +60,7 @@ export function HeroSection({ onStartScan }: HeroSectionProps) {
               transition: "all 0.2s",
             }}>
               <Phone style={{ width: 14, height: 14 }} />
-              +91 7409256789
+              +91 89400 56789
             </a>
           </div>
         </div>
@@ -300,8 +297,8 @@ export function HeroSection({ onStartScan }: HeroSectionProps) {
             color: "#5a5a5a", maxWidth: "600px",
             margin: "0 auto 40px", fontWeight: 400,
           }}>
-            Trusted by <strong style={{ color: "#1a1a1a", fontWeight: 700 }}>20,000+ happy patients</strong>, backed by{" "}
-            <strong style={{ color: "#1a1a1a", fontWeight: 700 }}>10+ certified doctors</strong>, 5+ years of experience.
+            Trusted by <strong style={{ color: "#1a1a1a", fontWeight: 700 }}>20,000+ happy patients</strong>, {" "}
+            <strong style={{ color: "#1a1a1a", fontWeight: 700 }}> 5+</strong> years of experience.
           </p>
 
           {/* CTA Buttons */}
@@ -326,7 +323,7 @@ export function HeroSection({ onStartScan }: HeroSectionProps) {
             </button>
 
             <a
-              href="tel:+917409256789"
+              href="tel:+918940056789"
               style={{
                 display: "flex", alignItems: "center", gap: "10px",
                 background: "rgba(255,255,255,0.9)", color: "#1a1a1a",

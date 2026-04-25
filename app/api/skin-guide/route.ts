@@ -117,7 +117,7 @@ export async function GET(request: NextRequest) {
     "Adgro Hair Tirupati, Tirupati, Andhra Pradesh",
     "Address: No.19-8-116, Landmark:Beside D Mart, 9D, Air Bypass Rd, above Caratlane, Bairagi patteda, Tirupati, Andhra Pradesh 517501, India",
     "Email: customercare@adgrohairtirupati.in",
-    "Contact: +91 7409256789",
+    "Contact: +91 89400 56789",
   ])
 
   doc.moveDown(0.8)
@@ -135,4 +135,5 @@ export async function GET(request: NextRequest) {
     },
   })
 }
+
 

@@ -43,7 +43,7 @@ const guides: Record<string, Guide> = {
         heading: "Bonitaa Expertise",
         items: [
           "5+ Years Experience",
-          "2,000+ Happy Patients",
+          "20,000+ Happy Patients",
           "10+ Certified Doctors",
           "Adgro Hair Tirupati, Tirupati, Andhra Pradesh",
         ],
@@ -54,7 +54,7 @@ const guides: Record<string, Guide> = {
           "Adgro Hair Tirupati",
           "No.19-8-116, Landmark:Beside D Mart, 9D, Air Bypass Rd, above Caratlane, Bairagi patteda, Tirupati, Andhra Pradesh 517501, India",
           "customercare@adgrohairtirupati.in",
-          "+91 7409256789",
+          "+91 89400 56789",
           "Book Consultation Now",
         ],
       },
@@ -92,7 +92,7 @@ const guides: Record<string, Guide> = {
         heading: "Bonitaa Expertise",
         items: [
           "5+ Years Experience",
-          "2,000+ Happy Patients",
+          "20,000+ Happy Patients",
           "10+ Certified Doctors",
           "Adgro Hair Tirupati, Tirupati, Andhra Pradesh",
         ],
@@ -103,7 +103,7 @@ const guides: Record<string, Guide> = {
           "Adgro Hair Tirupati",
           "No.19-8-116, Landmark:Beside D Mart, 9D, Air Bypass Rd, above Caratlane, Bairagi patteda, Tirupati, Andhra Pradesh 517501, India",
           "customercare@adgrohairtirupati.in",
-          "+91 7409256789",
+          "+91 89400 56789",
           "Book Consultation Now",
         ],
       },
@@ -142,7 +142,7 @@ const guides: Record<string, Guide> = {
         heading: "Bonitaa Expertise",
         items: [
           "5+ Years Experience",
-          "2,000+ Happy Patients",
+          "20,000+ Happy Patients",
           "10+ Certified Doctors",
           "Adgro Hair Tirupati, Tirupati, Andhra Pradesh",
         ],
@@ -153,7 +153,7 @@ const guides: Record<string, Guide> = {
           "Adgro Hair Tirupati",
           "No.19-8-116, Landmark:Beside D Mart, 9D, Air Bypass Rd, above Caratlane, Bairagi patteda, Tirupati, Andhra Pradesh 517501, India",
           "customercare@adgrohairtirupati.in",
-          "+91 7409256789",
+          "+91 89400 56789",
           "Book Consultation Now",
         ],
       },
@@ -191,7 +191,7 @@ const guides: Record<string, Guide> = {
         heading: "Bonitaa Expertise",
         items: [
           "5+ Years Experience",
-          "2,000+ Happy Patients",
+          "20,000+ Happy Patients",
           "10+ Certified Doctors",
           "Adgro Hair Tirupati, Tirupati, Andhra Pradesh",
         ],
@@ -202,7 +202,7 @@ const guides: Record<string, Guide> = {
           "Adgro Hair Tirupati",
           "No.19-8-116, Landmark:Beside D Mart, 9D, Air Bypass Rd, above Caratlane, Bairagi patteda, Tirupati, Andhra Pradesh 517501, India",
           "customercare@adgrohairtirupati.in",
-          "+91 7409256789",
+          "+91 89400 56789",
           "Book Consultation Now",
         ],
       },
@@ -240,7 +240,7 @@ const guides: Record<string, Guide> = {
         heading: "Bonitaa Expertise",
         items: [
           "5+ Years Experience",
-          "2,000+ Happy Patients",
+          "20,000+ Happy Patients",
           "10+ Certified Doctors",
           "Adgro Hair Tirupati, Tirupati, Andhra Pradesh",
         ],
@@ -251,7 +251,7 @@ const guides: Record<string, Guide> = {
           "Adgro Hair Tirupati",
           "No.19-8-116, Landmark:Beside D Mart, 9D, Air Bypass Rd, above Caratlane, Bairagi patteda, Tirupati, Andhra Pradesh 517501, India",
           "customercare@adgrohairtirupati.in",
-          "+91 7409256789",
+          "+91 89400 56789",
           "Book Consultation Now",
         ],
       },
@@ -270,6 +270,7 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json(guides[problem])
 }
+
 
 
 
