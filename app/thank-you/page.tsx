@@ -54,7 +54,7 @@ export default function ThankYouPage() {
             Thank You!
           </h1>
           <p style={{ margin: "0 auto 32px", maxWidth: "380px", lineHeight: 1.75, color: "#6b6b6b", fontSize: "0.98rem" }}>
-            Your details have been submitted successfully. Our specialist team will connect with you shortly.
+            Your detail have been submitted successfully. Our specialist team will connect with you shortly.
           </p>
 
           {/* Divider */}
