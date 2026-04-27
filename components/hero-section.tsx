@@ -156,7 +156,7 @@ export function HeroSection({ onCapture }: HeroSectionProps) {
           .hero-preview-button { width:100%; display:flex; align-items:center; justify-content:center; gap:10px; border:none; border-radius:18px; padding:15px 24px; background:linear-gradient(135deg,#f42020,#d91f1f); color:#fff; font-size:1.02rem; font-weight:800; box-shadow:0 20px 40px rgba(234,36,36,0.24); }
           @keyframes heroPreviewScan { 0% { top:18%; } 50% { top:78%; } 100% { top:18%; } }
           @media (max-width:1080px) { .hero-shell { grid-template-columns:1fr; gap:34px; } .hero-copy { text-align:center; max-width:860px; margin:0 auto; align-items:center; } .hero-logo, .hero-copy-intro { justify-content:center; align-items:center; } .hero-preview-card { margin:0 auto; } .hero-stats-grid { max-width:820px; margin:0 auto; } }
-          @media (max-width:760px) { .hero-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; max-width:520px; margin:0 auto; } .hero-stat-card { min-height:132px; padding:18px 10px; border-radius:18px; } .hero-stat-card:last-child { grid-column:1 / -1; justify-self:center; width:calc(50% - 6px); } .hero-preview-card { padding:22px 18px 20px; border-radius:28px; } }
+          @media (max-width:760px) { .hero-shell { display:flex; flex-direction:column; gap:24px; } .hero-copy-col { display:contents; } .hero-copy-top { order:1; text-align:center; max-width:860px; margin:0 auto; align-items:center; display:flex; flex-direction:column; align-items:center; } .hero-copy-top .hero-logo { justify-content:center; } .hero-copy-bottom { order:3; text-align:center; max-width:860px; margin:0 auto; align-items:center; display:flex; flex-direction:column; align-items:center; } .hero-copy-bottom .hero-copy-intro { justify-content:center; align-items:center; } .hero-preview-card { order:2; margin:0 auto; padding:22px 18px 20px; border-radius:28px; } .hero-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; max-width:520px; margin:0 auto; } .hero-stat-card { min-height:132px; padding:18px 10px; border-radius:18px; } .hero-stat-card:last-child { grid-column:1 / -1; justify-self:center; width:calc(50% - 6px); } }
           @media (max-width:380px) { .hero-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .hero-stat-card { min-height:112px; padding:14px 8px; } .hero-stat-card:last-child { grid-column:1 / -1; justify-self:center; width:calc(50% - 6px); } }
         `}</style>
 
@@ -326,75 +326,84 @@ export function HeroSection({ onCapture }: HeroSectionProps) {
 
         {/* ══ CONTENT ══ */}
         <div className="hero-shell" style={{ position: "relative", zIndex: 10 }}>
-          <div className="hero-copy">
-          <div className="hero-logo">
-            <img
-              src="/adgrologo.png"
-              alt="Adgro Hair Tirupati"
-              style={{ height: 68, width: "auto", maxWidth: "min(280px, 72vw)", objectFit: "contain" }}
-            />
-          </div>
-          {/* AI Badge */}
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "8px",
-            background: "rgba(255,255,255,0.9)",
-            border: "1px solid rgba(234,36,36,0.25)",
-            borderRadius: "100px",
-            padding: "6px 16px 6px 8px",
-            marginBottom: "28px",
-            boxShadow: "0 4px 20px rgba(234,36,36,0.1), 0 0 0 4px rgba(234,36,36,0.04)",
-            backdropFilter: "blur(8px)",
-          }}>
-            <span style={{
-              background: "linear-gradient(135deg,#ea2424,#c91f1f)", color: "#fff",
-              borderRadius: "100px", padding: "3px 10px",
-              fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
-            }}>NEW</span>
-            <span style={{ fontSize: "13px", fontWeight: 600, color: "#ea2424", display: "flex", alignItems: "center", gap: "5px" }}>
-              <Sparkles style={{ width: 13, height: 13 }} />
-              AI-Powered Hair Analysis
-            </span>
-          </div>
+          {/* Wrapper col — display:contents on mobile so children become direct flex items */}
+          <div className="hero-copy-col">
 
-          <div className="hero-copy-intro">
-            <div className="hero-copy-kicker">
-              <span style={{ width: 7, height: 7, borderRadius: "999px", background: "#ea2424", boxShadow: "0 0 0 4px rgba(234,36,36,0.12)" }} />
-              Adgro Hair Tirupati
+          {/* TOP: logo + badge (order:1 on mobile) */}
+          <div className="hero-copy hero-copy-top">
+            <div className="hero-logo">
+              <img
+                src="/adgrologo.png"
+                alt="Adgro Hair Tirupati"
+                style={{ height: 68, width: "auto", maxWidth: "min(280px, 72vw)", objectFit: "contain" }}
+              />
             </div>
-            <h1 className="hero-copy-title">
-              Understand Your Hair Loss
-              <span className="hero-copy-title-accent">The Right Way</span>
-            </h1>
-            <div className="hero-copy-divider" />
+            {/* AI Badge */}
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: "8px",
+              background: "rgba(255,255,255,0.9)",
+              border: "1px solid rgba(234,36,36,0.25)",
+              borderRadius: "100px",
+              padding: "6px 16px 6px 8px",
+              marginBottom: "0",
+              boxShadow: "0 4px 20px rgba(234,36,36,0.1), 0 0 0 4px rgba(234,36,36,0.04)",
+              backdropFilter: "blur(8px)",
+            }}>
+              <span style={{
+                background: "linear-gradient(135deg,#ea2424,#c91f1f)", color: "#fff",
+                borderRadius: "100px", padding: "3px 10px",
+                fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
+              }}>NEW</span>
+              <span style={{ fontSize: "13px", fontWeight: 600, color: "#ea2424", display: "flex", alignItems: "center", gap: "5px" }}>
+                <Sparkles style={{ width: 13, height: 13 }} />
+                AI-Powered Hair Analysis
+              </span>
+            </div>
           </div>
 
-          {/* Sub text */}
-          <p style={{
-            fontSize: "clamp(0.96rem, 1.8vw, 1.08rem)", lineHeight: 1.75,
-            color: "#5a5a5a", maxWidth: "600px",
-            margin: "0 0 34px", fontWeight: 400,
-          }}>
-            Trusted by <strong style={{ color: "#1a1a1a", fontWeight: 700 }}>20,000+ happy patients</strong>, {" "}
-            <strong style={{ color: "#1a1a1a", fontWeight: 700 }}> 5+</strong> years of experience.
-          </p>
-
-          {/* Stats Row */}
-          <div className="hero-stats-grid">
-            {stats.map(({ icon: Icon, value, label }, i) => (
-              <div
-                key={i}
-                className="hero-stat-card"
-              >
-                <div className="hero-stat-icon">
-                  <Icon style={{ width: 20, height: 20, color: "#ea2424" }} />
-                </div>
-                <div style={{ position: "relative" }}>
-                  <p className="hero-stat-value">{value}</p>
-                  <p className="hero-stat-label">{label}</p>
-                </div>
+          {/* BOTTOM: kicker + h1 + subtext + stats (order:3 on mobile) */}
+          <div className="hero-copy hero-copy-bottom">
+            <div className="hero-copy-intro">
+              <div className="hero-copy-kicker">
+                <span style={{ width: 7, height: 7, borderRadius: "999px", background: "#ea2424", boxShadow: "0 0 0 4px rgba(234,36,36,0.12)" }} />
+                Adgro Hair Tirupati
               </div>
-            ))}
+              <h1 className="hero-copy-title">
+                Understand Your Hair Loss
+                <span className="hero-copy-title-accent">The Right Way</span>
+              </h1>
+              <div className="hero-copy-divider" />
+            </div>
+
+            {/* Sub text */}
+            <p style={{
+              fontSize: "clamp(0.96rem, 1.8vw, 1.08rem)", lineHeight: 1.75,
+              color: "#5a5a5a", maxWidth: "600px",
+              margin: "0 0 34px", fontWeight: 400,
+            }}>
+              Trusted by <strong style={{ color: "#1a1a1a", fontWeight: 700 }}>20,000+ happy patients</strong>, {" "}
+              <strong style={{ color: "#1a1a1a", fontWeight: 700 }}> 5+</strong> years of experience.
+            </p>
+
+            {/* Stats Row */}
+            <div className="hero-stats-grid">
+              {stats.map(({ icon: Icon, value, label }, i) => (
+                <div
+                  key={i}
+                  className="hero-stat-card"
+                >
+                  <div className="hero-stat-icon">
+                    <Icon style={{ width: 20, height: 20, color: "#ea2424" }} />
+                  </div>
+                  <div style={{ position: "relative" }}>
+                    <p className="hero-stat-value">{value}</p>
+                    <p className="hero-stat-label">{label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+
           </div>
 
           <div className="hero-preview-card">
