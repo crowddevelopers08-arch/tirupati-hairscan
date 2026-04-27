@@ -156,8 +156,8 @@ export function HeroSection({ onCapture }: HeroSectionProps) {
           .hero-preview-button { width:100%; display:flex; align-items:center; justify-content:center; gap:10px; border:none; border-radius:18px; padding:15px 24px; background:linear-gradient(135deg,#f42020,#d91f1f); color:#fff; font-size:1.02rem; font-weight:800; box-shadow:0 20px 40px rgba(234,36,36,0.24); }
           @keyframes heroPreviewScan { 0% { top:18%; } 50% { top:78%; } 100% { top:18%; } }
           @media (max-width:1080px) { .hero-shell { grid-template-columns:1fr; gap:34px; } .hero-copy { text-align:center; max-width:860px; margin:0 auto; align-items:center; } .hero-logo, .hero-copy-intro { justify-content:center; align-items:center; } .hero-preview-card { margin:0 auto; } .hero-stats-grid { max-width:820px; margin:0 auto; } }
-          @media (max-width:760px) { .hero-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; max-width:520px; } .hero-stat-card { min-height:132px; padding:18px 10px; border-radius:18px; } .hero-preview-card { padding:22px 18px 20px; border-radius:28px; } }
-          @media (max-width:380px) { .hero-stats-grid { grid-template-columns:1fr; } .hero-stat-card { min-height:112px; flex-direction:row; justify-content:flex-start; text-align:left; padding:16px; } .hero-stat-label { min-height:auto; justify-content:flex-start; } }
+          @media (max-width:760px) { .hero-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; max-width:520px; margin:0 auto; } .hero-stat-card { min-height:132px; padding:18px 10px; border-radius:18px; } .hero-stat-card:last-child { grid-column:1 / -1; justify-self:center; width:calc(50% - 6px); } .hero-preview-card { padding:22px 18px 20px; border-radius:28px; } }
+          @media (max-width:380px) { .hero-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .hero-stat-card { min-height:112px; padding:14px 8px; } .hero-stat-card:last-child { grid-column:1 / -1; justify-self:center; width:calc(50% - 6px); } }
         `}</style>
 
         {/* ── BG LAYER 1: Large mesh gradient base ── */}
