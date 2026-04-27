@@ -26,9 +26,10 @@ export default function Home() {
   })
   const [capturedImage, setCapturedImage] = useState<string | null>(null)
 
-  const handleStartScanFromHero = (data: FormData) => {
-    setFormData(data)
-    setAppState("camera")
+  const handleHeroCapture = (imageData: string) => {
+    setFormData({ name: "", phone: "", email: "", area: "", problem: "" })
+    setCapturedImage(imageData)
+    setAppState("scanning")
   }
 
   const handleStartScan = () => {
@@ -56,7 +57,7 @@ export default function Home() {
 
   return (
     <main className="hair-experience min-h-screen bg-background">
-      <HeroSection onStartScan={handleStartScanFromHero} />
+      <HeroSection onCapture={handleHeroCapture} />
       <InfoSection onStartScan={handleStartScan} />
 
       <CameraModal

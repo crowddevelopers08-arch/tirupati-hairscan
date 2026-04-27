@@ -6,6 +6,7 @@ import { ArrowLeft, CheckCircle2, ChevronRight, FileText, Loader2, Phone } from 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import type { FormData } from "./form-modal"
 import type { HairProblemKey } from "./hair-report-details"
 
@@ -74,6 +75,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
     phone: formData.phone || "",
     email: formData.email || "",
     area: formData.area || "",
+    problem: formData.problem || "",
   })
   const [submitError, setSubmitError] = useState<string | null>(null)
 
@@ -87,6 +89,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
       phone: formData.phone || "",
       email: formData.email || "",
       area: formData.area || "",
+      problem: formData.problem || "",
     })
     setSubmitError(null)
     setDetailsFormOpen(true)
@@ -98,7 +101,8 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
       !detailsForm.name.trim() ||
       !detailsForm.phone.trim() ||
       !detailsForm.email.trim() ||
-      !detailsForm.area.trim()
+      !detailsForm.area.trim() ||
+      !detailsForm.problem.trim()
     ) return
     setSubmitting(true)
     try {
@@ -110,7 +114,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
           phone: detailsForm.phone,
           email: detailsForm.email,
           area: detailsForm.area,
-          problem,
+          problem: detailsForm.problem,
           imageData: capturedImage ?? "",
           sourceUrl: window.location.href,
         }),
@@ -124,7 +128,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
         "adgro-report",
         JSON.stringify({
           type: "hair",
-          problem,
+          problem: detailsForm.problem,
           name: detailsForm.name.trim(),
           phone: detailsForm.phone.trim(),
           email: detailsForm.email.trim(),
@@ -359,6 +363,27 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
                 />
               </div>
               <div className="flex flex-col gap-1.5">
+                <Label htmlFor="report-problem" style={{ fontWeight: 600, fontSize: "0.85rem", color: "#1a1a1a" }}>Your Hair Concern</Label>
+                <Select
+                  value={detailsForm.problem}
+                  onValueChange={(value: FormData["problem"]) => setDetailsForm({ ...detailsForm, problem: value })}
+                >
+                  <SelectTrigger
+                    id="report-problem"
+                    style={{ height: 44, borderRadius: "10px", fontFamily: "inherit", fontSize: "0.9rem" }}
+                  >
+                    <SelectValue placeholder="Choose a hair concern" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="hair-fall">Hair Fall</SelectItem>
+                    <SelectItem value="crown-thinning">Crown Thinning</SelectItem>
+                    <SelectItem value="frontal-hair-loss">Frontal Hair Loss</SelectItem>
+                    <SelectItem value="dandruff-scalp-issues">Dandruff / Scalp Issues</SelectItem>
+                    <SelectItem value="low-hair-density">Low Hair Density</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="flex flex-col gap-1.5">
                 <Label htmlFor="report-phone" style={{ fontWeight: 600, fontSize: "0.85rem", color: "#1a1a1a" }}>Phone Number</Label>
                 <Input
                   id="report-phone"
@@ -399,7 +424,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
               </div>
               <button
                 type="submit"
-                disabled={!detailsForm.name.trim() || !detailsForm.phone.trim() || !detailsForm.email.trim() || !detailsForm.area.trim()}
+                disabled={!detailsForm.name.trim() || !detailsForm.phone.trim() || !detailsForm.email.trim() || !detailsForm.area.trim() || !detailsForm.problem.trim()}
                 style={{
                   marginTop: "4px", width: "100%",
                   background: "linear-gradient(135deg, #ea2424, #c91f1f)",
@@ -408,7 +433,7 @@ export function ResultsView({ formData, capturedImage, onBack }: ResultsViewProp
                   cursor: "pointer",
                   boxShadow: "0 6px 20px rgba(234,36,36,0.3)",
                   display: "flex", alignItems: "center", justifyContent: "center", gap: "8px",
-                  opacity: (!detailsForm.name.trim() || !detailsForm.phone.trim() || !detailsForm.email.trim() || !detailsForm.area.trim()) ? 0.5 : 1,
+                  opacity: (!detailsForm.name.trim() || !detailsForm.phone.trim() || !detailsForm.email.trim() || !detailsForm.area.trim() || !detailsForm.problem.trim()) ? 0.5 : 1,
                   transition: "all 0.2s",
                   fontFamily: "inherit",
                 }}

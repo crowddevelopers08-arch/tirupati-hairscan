@@ -55,7 +55,7 @@ export function FormModal({ open, onOpenChange, onSubmit }: FormModalProps) {
     }
 
     if (!formData.problem) {
-      newErrors.problem = "Please select a problem"
+      newErrors.problem = "Please select your hair concern"
     }
 
     setErrors(newErrors)
@@ -147,7 +147,7 @@ export function FormModal({ open, onOpenChange, onSubmit }: FormModalProps) {
 
           <div className="flex flex-col gap-2">
             <Label htmlFor="problem" className="text-foreground">
-              Select Your Concerns
+              Your Hair Concern
             </Label>
             <Select
               value={formData.problem}
